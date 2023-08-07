@@ -13,6 +13,10 @@
 		F41A4AF32A81271700CDD95E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41A4AF12A81271700CDD95E /* Main.storyboard */; };
 		F41A4AF52A81271700CDD95E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41A4AF42A81271700CDD95E /* Assets.xcassets */; };
 		F41A4AF82A81271700CDD95E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41A4AF62A81271700CDD95E /* LaunchScreen.storyboard */; };
+		F41A4B012A81279A00CDD95E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F41A4B002A81279A00CDD95E /* SwiftyJSON */; };
+		F41A4B042A8127AF00CDD95E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F41A4B032A8127AF00CDD95E /* Alamofire */; };
+		F41A4B062A812B5D00CDD95E /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B052A812B5D00CDD95E /* BeerViewController.swift */; };
+		F41A4B092A8131A100CDD95E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F41A4B082A8131A100CDD95E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,7 @@
 		F41A4AF42A81271700CDD95E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F41A4AF72A81271700CDD95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F41A4AF92A81271700CDD95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F41A4B052A812B5D00CDD95E /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41A4B092A8131A100CDD95E /* Kingfisher in Frameworks */,
+				F41A4B012A81279A00CDD95E /* SwiftyJSON in Frameworks */,
+				F41A4B042A8127AF00CDD95E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 		F41A4AEA2A81271700CDD95E /* SeSAC_4Week_assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F41A4B052A812B5D00CDD95E /* BeerViewController.swift */,
 				F41A4AEB2A81271700CDD95E /* AppDelegate.swift */,
 				F41A4AED2A81271700CDD95E /* SceneDelegate.swift */,
 				F41A4AEF2A81271700CDD95E /* ViewController.swift */,
@@ -83,6 +92,11 @@
 			dependencies = (
 			);
 			name = SeSAC_4Week_assignment;
+			packageProductDependencies = (
+				F41A4B002A81279A00CDD95E /* SwiftyJSON */,
+				F41A4B032A8127AF00CDD95E /* Alamofire */,
+				F41A4B082A8131A100CDD95E /* Kingfisher */,
+			);
 			productName = SeSAC_4Week_assignment;
 			productReference = F41A4AE82A81271700CDD95E /* SeSAC_4Week_assignment.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,11 @@
 				Base,
 			);
 			mainGroup = F41A4ADF2A81271700CDD95E;
+			packageReferences = (
+				F41A4AFF2A81279A00CDD95E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				F41A4B022A8127AF00CDD95E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F41A4B072A8131A100CDD95E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F41A4AE92A81271700CDD95E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41A4B062A812B5D00CDD95E /* BeerViewController.swift in Sources */,
 				F41A4AF02A81271700CDD95E /* ViewController.swift in Sources */,
 				F41A4AEC2A81271700CDD95E /* AppDelegate.swift in Sources */,
 				F41A4AEE2A81271700CDD95E /* SceneDelegate.swift in Sources */,
@@ -295,6 +315,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +323,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "eunseo.SeSAC-4Week-assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +347,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +355,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "eunseo.SeSAC-4Week-assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +386,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F41A4AFF2A81279A00CDD95E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F41A4B022A8127AF00CDD95E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F41A4B072A8131A100CDD95E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F41A4B002A81279A00CDD95E /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41A4AFF2A81279A00CDD95E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		F41A4B032A8127AF00CDD95E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41A4B022A8127AF00CDD95E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F41A4B082A8131A100CDD95E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41A4B072A8131A100CDD95E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F41A4AE02A81271700CDD95E /* Project object */;
 }
