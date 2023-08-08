@@ -17,6 +17,8 @@
 		F41A4B042A8127AF00CDD95E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F41A4B032A8127AF00CDD95E /* Alamofire */; };
 		F41A4B062A812B5D00CDD95E /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B052A812B5D00CDD95E /* BeerViewController.swift */; };
 		F41A4B092A8131A100CDD95E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F41A4B082A8131A100CDD95E /* Kingfisher */; };
+		F41A4B0F2A82302400CDD95E /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B0E2A82302400CDD95E /* BeerListViewController.swift */; };
+		F41A4B132A82373800CDD95E /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B122A82373800CDD95E /* BeerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		F41A4AF72A81271700CDD95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F41A4AF92A81271700CDD95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F41A4B052A812B5D00CDD95E /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B0E2A82302400CDD95E /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
+		F41A4B122A82373800CDD95E /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +68,13 @@
 		F41A4AEA2A81271700CDD95E /* SeSAC_4Week_assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F41A4B122A82373800CDD95E /* BeerCollectionViewCell.swift */,
 				F41A4B052A812B5D00CDD95E /* BeerViewController.swift */,
 				F41A4AEB2A81271700CDD95E /* AppDelegate.swift */,
 				F41A4AED2A81271700CDD95E /* SceneDelegate.swift */,
 				F41A4AEF2A81271700CDD95E /* ViewController.swift */,
 				F41A4AF12A81271700CDD95E /* Main.storyboard */,
+				F41A4B0E2A82302400CDD95E /* BeerListViewController.swift */,
 				F41A4AF42A81271700CDD95E /* Assets.xcassets */,
 				F41A4AF62A81271700CDD95E /* LaunchScreen.storyboard */,
 				F41A4AF92A81271700CDD95E /* Info.plist */,
@@ -159,6 +165,8 @@
 			files = (
 				F41A4B062A812B5D00CDD95E /* BeerViewController.swift in Sources */,
 				F41A4AF02A81271700CDD95E /* ViewController.swift in Sources */,
+				F41A4B132A82373800CDD95E /* BeerCollectionViewCell.swift in Sources */,
+				F41A4B0F2A82302400CDD95E /* BeerListViewController.swift in Sources */,
 				F41A4AEC2A81271700CDD95E /* AppDelegate.swift in Sources */,
 				F41A4AEE2A81271700CDD95E /* SceneDelegate.swift in Sources */,
 			);
