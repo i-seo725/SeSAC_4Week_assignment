@@ -42,6 +42,7 @@ class BeerListViewController: UIViewController {
                     let description = item["description"].stringValue
                     let beer = Beer(name: name, imageURL: image, description: description)
                     self.beerList.append(beer)
+                    self.beerListCollectionView.reloadData()
                 }
             case .failure(let error):
                 print(error)
@@ -52,7 +53,6 @@ class BeerListViewController: UIViewController {
 }
 extension BeerListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("셀 만들어짐")
         return beerList.count
     }
     
@@ -63,26 +63,29 @@ extension BeerListViewController: UICollectionViewDelegate, UICollectionViewData
         
         cell.beerDescriptionLabel.text = beerList[indexPath.row].description
         cell.beerDescriptionLabel.numberOfLines = 0
+        cell.beerDescriptionLabel.font = .systemFont(ofSize: 13)
         
         guard let imageURL = URL(string: "\(beerList[indexPath.row].imageURL)") else { return UICollectionViewCell() }
         if "\(imageURL)" == "" {
             cell.emptyImageLabel.text = "이미지가 없습니다."
         } else {
             cell.beerImageView.kf.setImage(with: imageURL)
+            cell.emptyImageLabel.text = ""
         }
-        print("만들어짐")
         return cell
     }
     
     func configLayout() {
         let layout = UICollectionViewFlowLayout()
-        let space: CGFloat = 12
-        let width = UIScreen.main.bounds.width - 16 * 3
+        let space: CGFloat = 8
+        let width = UIScreen.main.bounds.width - space * 3
         
-        layout.itemSize = .init(width: width / 2, height: width / 2 + 30)
+        layout.itemSize = .init(width: width / 2, height: width / 2 + 100)
         layout.minimumLineSpacing = space
         layout.minimumInteritemSpacing = space
+        layout.sectionInset = .init(top: 8, left: 4, bottom: 4, right: 4)
         
+        beerListCollectionView.collectionViewLayout = layout
     }
     
 }
